@@ -18,7 +18,7 @@ function test(states){
       	}
       	else if (action_result == "RIGHT") states[0] = "B";
       	else if (action_result == "LEFT") states[0] = "A";
-	var random = Math.floor((Math.random() * (1 - 0 + 1)) + 0);
+	var random = Math.floor(Math.random());
 	states[random] = "DIRTY";
 	if(states[0] != "CLEAN" && states[1] != "CLEAN"){
 		setTimeout(function(){ test(states); }, 2000);
